@@ -12,13 +12,13 @@ This container includes:
 - [cdsapi](https://github.com/ecmwf/cdsapi)
 
 Singularity container based on the recipe:
-[Singularity](https://github.com/sylvainschmitt/singularity-cds/blob/main/Singularity)
+[Singularity](https://github.com/sylvainschmitt/singularity-cdsapi/blob/main/Singularity)
 
 Image singularity (V\>=3.3) is automatically test and built and pushed
 on the registry using
-[test.yml](https://github.com/sylvainschmitt/singularity-cds/blob/main/.github/workflows/test.yml)
+[test.yml](https://github.com/sylvainschmitt/singularity-cdsapi/blob/main/.github/workflows/test.yml)
 &
-[builder.yml](https://github.com/sylvainschmitt/singularity-cds/blob/main/.github/workflows/builder.yml)
+[builder.yml](https://github.com/sylvainschmitt/singularity-cdsapi/blob/main/.github/workflows/builder.yml)
 
 **build**:
 
@@ -29,14 +29,14 @@ sudo singularity build cds.sif Singularity
 **pull**:
 
 ``` bash
-singularity pull https://github.com/sylvainschmitt/singularity-cds/releases/download/0.0.1/sylvainschmitt-singularity-cds.latest.sif
+singularity pull https://github.com/sylvainschmitt/singularity-cdsapi/releases/download/0.0.1/sylvainschmitt-singularity-cdsapi.latest.sif
 ```
 
 **snakemake**:
 
 ``` python
     singularity: 
-        "https://github.com/sylvainschmitt/singularity-cds/releases/download/0.0.1/sylvainschmitt-singularity-cds.latest.sif"
+        "https://github.com/sylvainschmitt/singularity-cdsapi/releases/download/0.0.1/sylvainschmitt-singularity-cdsapi.latest.sif"
 ```
 
 **configure**:
