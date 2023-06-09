@@ -1,25 +1,14 @@
 Bootstrap: docker
-From :  continuumio/miniconda3
-IncludeCmd : yes
+From: python:3.7-alpine
 
-%files
-environment.yml
-
-%post
-apt-get update && apt-get install -y procps && apt-get clean -y
-/opt/conda/bin/conda env create -n myEnv -f /environment.yml 
-/opt/conda/bin/conda clean -a
-
-%environment
-export PATH=/opt/conda/bin:$PATH
-. /opt/conda/etc/profile.d/conda.sh
-conda activate myEnv
+%post 
+    pip install cdsapi 
 
 %runscript
-echo "hello this is a template build."
+echo "Python API to access the Copernicus Climate Data Store (CDS) (https://confluence.ecmwf.int/display/CKB/How+to+download+ERA5)"
 
 %help
-Tools for Snakemake template
+Python API to access the Copernicus Climate Data Store (CDS) 
 
 %labels
 Author Sylvain Schmitt

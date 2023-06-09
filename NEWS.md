@@ -1,2 +1,2 @@
-# Singularity-template 0.0.9001
-* init
+# Singularity-cds 0.0.9001
+* v1
